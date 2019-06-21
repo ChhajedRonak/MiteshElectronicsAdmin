@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 13 Jun, 2019, 2:27:44 PM
+    Author     : HP PC
+*/
+body{
+    background-color: white;
+}
+nav{
+    background-color: inherit;
+    position: fixed;
+    float: left;
+    margin-top: 12px;
+}
+nav u{
+    padding-inline-start:30px;
+}
+li{
+    font-size: 18px;
+    padding: 5px;
+    font-family: arial;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-family: arial;
+}
+nav a:hover {
+    color:#0556ac;
+    font-weight: bolder;
+}
+
+form{
+    margin-top:115px;
+}
+table h4,form h4{
+    font-family: Arial;
+    font-size:25px;
+    font-style:normal ;
+    color:#0556ac;
+}
+input[type=text],select,input[type=number],input[type=password]{
+    height:22px;
+    font-family: Arial;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: groove;
+}
+input[type=file]{
+    height:23px;
+    width:200px;
+    font-family: Arial;
+    font-size: 15px;
+}
+input[type=submit]{
+    height:37px;
+    padding-left:30px;
+    padding-right:30px;
+    border-style: none;
+    font-family:arial ;
+    background-color: #0556ac;
+    color:white;
+    font-size:20px;
+    border-radius: 10px;
+    outline: none;
+}
+input[type=submit]:hover{
+    box-shadow: 5px 10px 16px 0 rgba(0,0,0,0.24), 0 15px 50px 0 rgba(0,0,0,0.19);
+}
+textarea{
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-family: Arial;
+    font-size: 15px;
+}
+td>a,label{
+    font-family: Arial;
+    font-size: 16px;
+}
+fieldset{
+    width:50%;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    font-family: arial;
+}
+fieldset legend b{
+    font-family: Arial;
+    font-size:20px;
+    font-style:normal ;
+    color:#0556ac;
+}
+div input[type=radio]{
+    height: 18px;
+    width:18px;
+}
+div > label{
+    font-family: arial;
+    font-size: 20px;
+    color: darkslategray;
+    padding-right: 30px;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 Jun, 2019 3:45:23 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="mitesh_electronics" name="POJOs.CustomerMaster" optimistic-lock="version" table="customer_master">
+    <id name="customerId" type="java.lang.Integer">
+      <column name="customer_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="firstName" type="string">
+      <column name="first_name" not-null="true"/>
+    </property>
+    <property name="lastName" type="string">
+      <column name="last_name" not-null="true"/>
+    </property>
+    <property name="contactNo" type="string">
+      <column length="10" name="contact_no" not-null="true"/>
+    </property>
+    <property name="email" type="string">
+      <column length="45" name="email" not-null="true"/>
+    </property>
+    <property name="password" type="string">
+      <column length="45" name="password" not-null="true"/>
+    </property>
+    <property name="addressLine1" type="string">
+      <column name="address_line1" not-null="true"/>
+    </property>
+    <property name="addressLine2" type="string">
+      <column name="address_line_2"/>
+    </property>
+    <property name="addressLine3" type="string">
+      <column name="address_line_3"/>
+    </property>
+    <property name="pincode" type="int">
+      <column name="pincode" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="orderMasters" table="order_master">
+      <key>
+        <column name="customer_id" not-null="true"/>
+      </key>
+      <one-to-many class="POJOs.OrderMaster"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="carts" table="cart">
+      <key>
+        <column name="customer_id" not-null="true"/>
+      </key>
+      <one-to-many class="POJOs.Cart"/>
+    </set>
+  </class>
+</hibernate-mapping>
