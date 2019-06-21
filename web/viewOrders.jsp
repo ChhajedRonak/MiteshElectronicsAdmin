@@ -122,7 +122,7 @@
                         select o.order_id, o.date_time, c.first_name,c.last_name,c.contact_no,c.address_line1,c.address_line_2,c.address_line_3,c.pincode from order_master o inner join customer_master c on o.customer_id = c.customer_id where is_delivered='D';
                     </sql:query>
 
-                    <br><h4 style="font-size: 20px;margin-left: -30px;">Orders Pending</h4>
+                    <br><h4 style="font-size: 20px;margin-left: -30px;">Orders Delivered</h4>
                     <c:forEach var="row" items="${selectOrderMaster.rows}">
                         <fieldset align="left" style="margin-bottom:20px;width:90%;">
                             <legend><b>Order ID:${row.order_id}</b></legend>
